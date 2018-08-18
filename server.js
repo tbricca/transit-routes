@@ -18,6 +18,11 @@ mongoose
 
 app.get("/", (req, res) => res.send("Hello"));
 
+// This will connect the url to the proper Routes Here
+app.use("/api/cities", cities);
+app.use("/api/companies", companies);
+app.use("/api/transitRoutes", transitRoutes);
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log("Server running on port ${port}"));
