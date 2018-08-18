@@ -16,7 +16,22 @@ router.get("/test", (req, res) => res.json({ msg: "Cities Works" }));
 // Access: Public route
 
 router.post("/addCity", (req, res) => {
-  City.findOne({ name: req.body.name });
+  City.findOne({ name: req.body.name })
+    // this is a promise
+    .then(user => {
+      if (user) {
+        return res.status(400).json({ name: "City already exists" });
+      } else {
+        const newCity = new City({
+          name: req.body.name,
+          state: req.body.state
+        });
+        newCity
+          .save()
+          .then(city => res.json(city))
+          .catch(err => console.log(err));
+      }
+    });
 });
 
 module.exports = router;
