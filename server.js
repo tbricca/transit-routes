@@ -9,7 +9,7 @@ const journeys = require("./routes/api/journeys");
 const app = express();
 
 // Body Parser Middleware
-app.use(body.Parser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // DB Config
