@@ -77,9 +77,29 @@ const JourneySchema = new Schema({
       required: true
     }
   ],
-  stops: {
-    type: [String]
-  },
+  // here
+  stopAddress: [
+    {
+      address: String
+    },
+    {
+      city: String
+    },
+    {
+      state: String
+    },
+    {
+      zip: String
+    }
+  ],
+  stopLatLng: [
+    {
+      lat: number
+    },
+    {
+      lng: number
+    }
+  ],
   amenities: {
     type: [String]
   },
