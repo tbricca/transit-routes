@@ -1,4 +1,4 @@
-const mongoose = reuqire("mongoose");
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // route name / company / transitType / start / end / stops / amenities / price
