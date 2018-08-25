@@ -10,7 +10,7 @@ const JourneySchema = new Schema({
   },
   company: {
     type: Schema.Types.ObjectId,
-    ref: "journeys"
+    ref: "companies"
   },
   website: {
     type: String,
@@ -69,11 +69,11 @@ const JourneySchema = new Schema({
   ],
   endLatLng: [
     {
-      lat: number,
+      lat: Number,
       required: true
     },
     {
-      lng: number,
+      lng: Number,
       required: true
     }
   ],
@@ -94,17 +94,17 @@ const JourneySchema = new Schema({
   ],
   stopLatLng: [
     {
-      lat: number
+      lat: Number
     },
     {
-      lng: number
+      lng: Number
     }
   ],
   amenities: {
     type: [String]
   },
   price: {
-    type: number
+    type: Number
   },
   date: {
     type: Date,

@@ -41,5 +41,11 @@ const CompanySchema = new Schema({
       state: String,
       required: true
     }
-  ]
+  ],
+  journeyName: {
+    type: Schema.Types.ObjectId,
+    ref: "journeys"
+  }
 });
+
+module.exports = mongoose.model("company", CompanySchema);
