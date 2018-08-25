@@ -14,33 +14,77 @@ const JourneySchema = new Schema({
   },
   website: {
     type: String,
-    required: false
+    required: true
   },
   transitType: {
     type: String,
     requried: true
   },
   /// need to check how to input addresses into the database
-  start: {
-    type: [String],
-    required: true
-  },
-  end: {
-    type: [String],
-    required: true
-  },
-  // should this be an array?
+  startAddress: [
+    {
+      address: String,
+      required: true
+    },
+    {
+      city: String,
+      required: true
+    },
+    {
+      state: String,
+      required: true
+    },
+    {
+      zip: String,
+      required: true
+    }
+  ],
+  startLatLng: [
+    {
+      lat: number,
+      required: true
+    },
+    {
+      lng: number,
+      required: true
+    }
+  ],
+  endAddress: [
+    {
+      address: String,
+      required: true
+    },
+    {
+      city: String,
+      required: true
+    },
+    {
+      state: String,
+      required: true
+    },
+    {
+      zip: String,
+      required: true
+    }
+  ],
+  endLatLng: [
+    {
+      lat: number,
+      required: true
+    },
+    {
+      lng: number,
+      required: true
+    }
+  ],
   stops: {
-    type: [String],
-    required: false
+    type: [String]
   },
   amenities: {
-    type: [String],
-    required: false
+    type: [String]
   },
   price: {
-    type: number,
-    required: false
+    type: number
   },
   date: {
     type: Date,
