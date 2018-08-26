@@ -41,11 +41,11 @@ const JourneySchema = new Schema({
   ],
   startLatLng: [
     {
-      lat: number,
+      lat: Number,
       required: true
     },
     {
-      lng: number,
+      lng: Number,
       required: true
     }
   ],
