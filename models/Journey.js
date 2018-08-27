@@ -112,4 +112,4 @@ const JourneySchema = new Schema({
   }
 });
 
-module.exports = User = mongoose.model("journey", JourneySchema);
+// module.exports = User = mongoose.model("journey", JourneySchema);

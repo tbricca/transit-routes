@@ -32,7 +32,7 @@ const CompanySchema = new Schema({
     type: String,
     required: true
   },
-  headquarters: [
+  headquarter: [
     {
       city: String,
       required: true
@@ -41,11 +41,11 @@ const CompanySchema = new Schema({
       state: String,
       required: true
     }
-  ],
-  journeyName: {
-    type: Schema.Types.ObjectId,
-    ref: "journeys"
-  }
+  ]
+  // journeyName: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: "journeys"
+  // }
 });
 
-module.exports = mongoose.model("company", CompanySchema);
+module.exports = mongoose.model("companies", CompanySchema);
