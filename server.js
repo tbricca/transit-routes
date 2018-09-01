@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
 const cities = require("./routes/api/cities");
-const companies = require("./routes/api/companies");
-const journeys = require("./routes/api/journeys");
+// const companies = require("./routes/api/companies");
+// const journeys = require("./routes/api/journeys");
 
 const app = express();
 
@@ -25,8 +25,8 @@ app.get("/", (req, res) => res.send("Hello"));
 
 // This will connect the url to the proper Routes Here
 app.use("/api/cities", cities);
-app.use("/api/companies", companies);
-app.use("/api/journeys", journeys);
+// app.use("/api/companies", companies);
+// app.use("/api/journeys", journeys);
 
 const port = process.env.PORT || 5000;
 

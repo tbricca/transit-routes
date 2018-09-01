@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+// DOUBLE CHECK TO SEE IF I NEED TO BRING IN MONGOOSE
 
 // Load City Model in order to check if City exists in database
 const City = require("../../models/City");

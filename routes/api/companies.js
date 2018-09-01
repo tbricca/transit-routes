@@ -33,4 +33,6 @@ router.post("/addCompany", (req, res) => {
     });
 });
 
+// need to go back and properly do these routes
+
 module.exports = router;
